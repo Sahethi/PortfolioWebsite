@@ -1,27 +1,23 @@
-
 import whiteGraphics from "../assets/images/white-graphics.png";
 import CBX from "../assets/images/cbx.png";
 import philaTours from "@/assets/images/phila-tours.png";
-import yelpCamp from '@/assets/images/yelp-camp.png';
+import yelpCamp from "@/assets/images/yelp-camp.png";
 import clima from "@/assets/images/clima.png";
 import paper from "@/assets/images/paper.png";
-import getItDone from '@/assets/images/to-do.png';
+import getItDone from "@/assets/images/to-do.png";
 import Image from "next/image";
-import CheckCircleIcon from "@/assets/icons/check-circle.svg"
-import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
-import grainImage from '@/assets/images/grain.jpg';
+import CheckCircleIcon from "@/assets/icons/check-circle.svg";
+import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-
 
 const portfolioProjects = [
   {
     company: "Nov",
     year: "2023",
     title: "A Survey Paper on Browser Extensions to Detect Web Attacks",
-    results: [
-      { title: "173 Full-Text Views" },
-    ],
+    results: [{ title: "173 Full-Text Views" }],
     link: "https://www.researchgate.net/publication/375883695_A_Survey_Paper_on_Browser_Extensions_to_Detect_Web_Attacks",
     image: paper,
   },
@@ -55,8 +51,12 @@ const portfolioProjects = [
     title: "Yelp Camp",
     results: [
       { title: "Integrated Maptiler for interactive campground locations" },
-      { title: "Optimized image handling with Cloudinary for faster load times" },
-      { title: "Enhanced mobile responsiveness using Bootstrap and custom CSS" },
+      {
+        title: "Optimized image handling with Cloudinary for faster load times",
+      },
+      {
+        title: "Enhanced mobile responsiveness using Bootstrap and custom CSS",
+      },
     ],
     link: "https://yelp-camp-81o8.onrender.com/",
     image: yelpCamp,
@@ -80,7 +80,10 @@ const portfolioProjects = [
     results: [
       { title: "Enabled task creation and deletion with priority sorting" },
       { title: "Implemented dark and light mode themes for user preference" },
-      { title: "Designed interactive UI wireframes using Balsamiq wireframing tool." },
+      {
+        title:
+          "Designed interactive UI wireframes using Balsamiq wireframing tool.",
+      },
     ],
     link: "https://get-it-done-zeta.vercel.app/",
     image: getItDone,
@@ -101,9 +104,9 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="project"className="pb-16 lg:py-24">
+    <section id="project" className="pb-16 lg:py-24">
       <div className="container">
-        <SectionHeader 
+        <SectionHeader
           eyebrown="Real-world Results"
           title="Featured Projects & Research"
           description="See how I transformed concepts into engaging digital experiences"
@@ -114,42 +117,44 @@ export const ProjectsSection = () => {
               key={project.title}
               className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
               style={{
-                top: `calc(64px + ${projectIndex * 40}px)`
+                top: `calc(64px + ${projectIndex * 40}px)`,
               }}
             >
-
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase 
-                  tracking-widest text-sm text-transparent bg-clip-text">
+                  <div
+                    className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase 
+                  tracking-widest text-sm text-transparent bg-clip-text"
+                  >
                     <span>{project.company}</span>
                     <span>&bull;</span>
                     <span>{project.year}</span>
                   </div>
 
-
-                  <h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">{project.title}</h3>
+                  <h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">
+                    {project.title}
+                  </h3>
 
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
 
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map((result, index) => (
-                      <li key={project.title + index} className="flex gap-2 text-sm md:text-base text-white/25">
+                      <li
+                        key={project.title + index}
+                        className="flex gap-2 text-sm md:text-base text-white/25"
+                      >
                         <CheckCircleIcon className="size-5 md:size-6" />
-                        <span>
-                          {result.title}
-                        </span>
+                        <span>{result.title}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <a href={project.link}>
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold 
+                  <a target="_blank" href={project.link}>
+                    <button
+                      className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold 
                 inline-flex items-center justify-center gap-2 mt-8"
                     >
-                      <span>
-                        Visit Now
-                      </span>
+                      <span>Visit Now</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
                   </a>
@@ -168,5 +173,5 @@ export const ProjectsSection = () => {
         </div>
       </div>
     </section>
-  )
+  );
 };
