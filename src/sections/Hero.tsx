@@ -173,7 +173,7 @@ export const HeroSection = () => {
           <ArrowDown className="size-4" />
         </a>
         <a
-          href="https://drive.google.com/file/d/1VzjuPR353yQJQ43mqPttIqe6xMz9OCM_/view"
+          href="https://drive.google.com/file/d/1_8XVOugvdSxWaQSMwnzjeqwcpQ_KKlWb/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className=" z-10 inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-white/90 transition-colors cursor-pointer"
